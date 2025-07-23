@@ -32,6 +32,11 @@
     text-transform: uppercase;
     font-weight: 900;
   }
+
+ .to-do-img{
+   width: 75px;
+   margin: 0 auto -15px;
+ }
   
   .todo-form {
     display: flex;
@@ -171,18 +176,70 @@
     text-align: center;
   }
   
-  /* Responsivo */
-  @media (max-width: 500px) {
-    .todo-form {
-      flex-direction: column;
-    }
-  
-    button {
-      width: 100%;
-    }
-  
-    .filters {
-      flex-direction: column;
-    }
+
+  /* RESPONSIVIDADE APRIMORADA */
+@media (max-width: 768px) {
+  body {
+    align-items: flex-start;
+    padding: 10px;
+    height: auto;
   }
+
+  .container {
+    width: 100%;
+    max-width: none;
+    padding: 20px 15px;
+    border-radius: 12px;
+    box-shadow: none;
+  }
+
+  .to-do-img {
+    width: 60px;
+  }
+
+  .todo-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  input, button {
+    width: 100%;
+  }
+
+  .filters {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .filter {
+    flex: 1 1 30%;
+    text-align: center;
+  }
+
+  .todo-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .todo-item div {
+    margin-top: 8px;
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .clear-all-btn {
+    font-size: 16px;
+  }
+
+  #todo-list {
+    max-height: 50vh;
+    overflow-y: auto;
+  }
+}
+
   
