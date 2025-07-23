@@ -26,16 +26,22 @@
   }
 
   .container h1 {
+    font-family: "Bungee Spice", sans-serif;
     text-align: center;
     margin-bottom: 40px;
-    color: #00bcd4;
-    text-transform: uppercase;
-    font-weight: 900;
+    font-size: 3rem;
+    font-weight: 400;
   }
 
- .to-do-img{
-   width: 75px;
-   margin: 0 auto -15px;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
  }
   
   .todo-form {
@@ -51,11 +57,19 @@
     border: none;
     border-radius: 8px;
     background-color: #2a2a2a;
-    color: #fff;
+    color: #ffffff;
+  }
+
+  input:focus {
+    outline: none;
+    border: 2px solid #00bcd4;
+    box-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
   }
   
   input::placeholder {
     color: #aaa;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
   }
   
   /* Botões */
@@ -193,15 +207,23 @@
     box-shadow: none;
   }
 
-  .to-do-img {
+  /* .to-do-img {
     width: 60px;
-  }
+  } */
 
   .todo-form {
     flex-direction: column;
     gap: 10px;
+    
+  }
+  
+  .todo-form input[type="text"]::placeholder {
+    font-size: 17px;
   }
 
+
+  
+  
   input, button {
     width: 100%;
   }
